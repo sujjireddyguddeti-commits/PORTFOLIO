@@ -210,11 +210,18 @@ header {
     box-shadow:
         0 0 40px rgba(0,217,255,0.15),
         inset 0 0 40px rgba(0,217,255,0.08);
+    transition: all 0.4s ease;
+}
+
+.image-circle:hover {
+    box-shadow:
+        0 0 50px rgba(0,217,255,0.35),
+        inset 0 0 50px rgba(0,217,255,0.15);
 }
 
 .initial {
-    width: 250px;
-    height: 250px;
+    width: 270px;
+    height: 270px;
     border-radius: 50%;
 
     display: flex;
@@ -228,6 +235,22 @@ header {
     font-weight: 800;
 
     border: 1px solid rgba(0,217,255,0.3);
+    overflow: hidden;
+    position: relative;
+}
+
+.initial img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    border-radius: 50%;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.image-circle:hover .initial img {
+    transform: scale(1.06);
 }
 
 
@@ -799,13 +822,13 @@ footer p {
     }
 
     .image-circle {
-        width: 230px;
-        height: 230px;
+        width: 250px;
+        height: 250px;
     }
 
     .initial {
-        width: 175px;
-        height: 175px;
+        width: 200px;
+        height: 200px;
         font-size: 45px;
     }
 
